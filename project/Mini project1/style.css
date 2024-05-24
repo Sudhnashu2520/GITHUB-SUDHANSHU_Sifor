@@ -1,0 +1,73 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header{ 
+   
+    text-align: center;
+    background: orange;
+    color: white;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.search input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: #fff;
+    margin-left: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+#btn{
+   
+    background-image: linear-gradient(blue,black);
+}
+.foodlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+}
+.foodlist .food{
+    border: 2px solid black;
+    border-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.foodlist img{
+   height: 200px;
+   width: 200px;
+   margin: 5px;
+}
+
+.foodlist h2{
+    font-size: medium;
+}
+.favbtn{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+footer{
+    text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
