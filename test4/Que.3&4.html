@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+   
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h2>My Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quis et expedita alias eveniet velit, itaque maxime officia labore consequatur, quisquam eius. Minima beatae placeat quas praesentium. Temporibus, molestias quod!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt facere a esse itaque, exercitationem ea commodi voluptatibus aspernatur omnis minima tempora sunt nihil reiciendis cupiditate distinctio id velit sint quidem dolor corporis? Obcaecati tenetur unde voluptate fugiat reprehenderit temporibus optio!</p>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required minlength="4">
+            <div class="error" id="usernameError"></div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8">
+            <div class="error" id="passwordError" ></div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        This is my footer
+    </footer>
+</body>
+</html>
