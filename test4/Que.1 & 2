@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .navbar .links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .navbar .links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+        }
+
+
+        .navbar .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .search input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        
+        .navbar .search .profile-icon img{
+            height: 25px;
+            width: 25px;
+            
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color:grey;
+        }
+
+        tfoot {
+            font-weight: bold;
+        }
+
+        .total-price {
+            text-align: right;
+        }
+        
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Address</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <div class="profile-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png">
+            </div>
+        </div>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Soap</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Candy</td>
+                <td>Rs. 10</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Biscuit</td>
+                <td>Rs. 15</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Icecream</td>
+                <td>Rs. 20</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Cupcake</td>
+                <td>Rs. 25</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" class="total-price">Total Price</td>
+                <td>Rs. 145</td> 
+            </tr>
+        </tfoot>
+    </table>
+
+    <footer class="footer">
+       This is my footer
+    </footer>
+</body>
+</html>
