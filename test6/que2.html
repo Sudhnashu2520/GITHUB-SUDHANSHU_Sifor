@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = "Var";
+        {
+            var a= "Inscope Var";
+            document.write("Var in scope : "+a+"<br>")
+        }
+       
+        document.write("Var out of scope : "+a+"<br>")
+
+        let b = "Let";
+        {
+            let b ="Inscope Let";
+            document.write("Let in scope : "+b+"<br>")
+        }
+        
+        document.write("Let out of scope : "+b+"<br>")
+
+        const c = "Const";
+        // cannot reassign the variable in const
+    </script>
+</body>
+</html>
