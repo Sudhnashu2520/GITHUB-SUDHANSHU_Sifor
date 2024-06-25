@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("Enter 1st number : "))
+        var num2 = parseInt(prompt("Enter 2nd number : "))
+
+        var op = prompt("Enter the operation to perform : ")
+
+        function add(n1,n2){
+            return  document.write(n1+n2)
+        }
+        function sub(n1,n2){
+            return  document.write(n1-n2)
+        }
+        function mul(n1,n2){
+            return  document.write(n1*n2)
+        }
+        function div(n1,n2){
+            return  document.write(n1/n2)
+        }
+
+        if(op === '+'){
+           add(num1,num2)
+        }else if(op === '-'){
+           sub(num1,num2)
+        }
+        else if(op === '*'){
+           mul(num1,num2)
+        }
+        else if(op === '/'){
+           div(num1,num2)
+        }
+    </script>
+</body>
+</html>
