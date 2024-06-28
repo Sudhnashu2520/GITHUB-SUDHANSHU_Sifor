@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var date = new Date();
+      function dateManipulation(date){
+        document.write(date.getMonth() + 1);
+      document.write("<br>");
+      date.setMonth(6);
+      document.write(date);
+      document.write("<br>");
+      date.setDate(15);
+      document.write(date);
+      document.write("<br>");
+      document.write(date.getFullYear());
+      document.write("<br>");
+      }
+      dateManipulation(date)
+      
+
+      
+
+      let result = {};
+      function repcahar(str){
+        for (let i = 0; i < str.length; i++) {
+        let ch = str.charAt(i);
+        if (!result[ch]) {
+          result[ch] = 1;
+        } else {
+          result[ch] += 1;
+        }
+      }
+      
+      return console.log(result)
+      }
+      repcahar('sudhanshu')
+
+      function reverseandsortarray(arr){
+        arr.reverse()
+       
+        arr.sort()
+        
+        return document.write(arr+'<br>')
+      }
+      reverseandsortarray(['max','will','drake','anna'])
+
+      function formatstring(str){
+        str.toUpperCase()
+        document.write(str.toUpperCase()+'<br>')
+        
+        document.write(str.toLowerCase()+'<br>')
+        
+        document.write(str.substring(2,5)+'<br>')
+        
+      }
+
+      formatstring('sudhanshu')
+
+      function manipulatearray(arr){
+        arr.push('Volvo')
+        document.write(arr+'<br>')
+        arr.pop()
+        document.write(arr+'<br>')
+        arr.forEach(toupper)
+        function toupper(i){
+            i.toUpperCase()
+        }
+        document.write(arr+'<br>')
+       
+        document.write(arr.join(', ')+'<br>')
+      }
+
+      manipulatearray(['BMW','Ford','Mercedes'])
+    </script>
+  </body>
+</html>
