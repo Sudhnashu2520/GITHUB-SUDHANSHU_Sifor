@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+  
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="data"></div>
+
+    <script>
+        function fetchData() {
+            fetch('https://dummy.restapiexample.com/api/v1/employee/1')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => displayData(data))
+                .catch(error => console.error('There was a problem with the fetch operation:', error));
+        }
+
+        function displayData(data) {
+            var employee = data.data;
+            var dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = `
+                <div >
+                    <h2>${employee.employee_name}</h2>
+                    <p>Age: ${employee.employee_age}</p>
+                    <p>Salary: ${employee.employee_salary}</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
