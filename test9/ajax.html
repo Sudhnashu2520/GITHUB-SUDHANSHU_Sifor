@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+    <button onclick="makeAjaxCall()">Fetch Data</button>
+    <div id="data"></div>
+
+    <script>
+        function f1() {
+            var xhr = new XMLHttpRequest();
+            var url = 'https://randomuser.me/api/'; // Random User API URL
+
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    displayData(response);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayData(data) {
+            var user = data.results[0];
+            var dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = `
+                <div >
+                    <h2>${user.name.title} ${user.name.first} ${user.name.last}</h2>
+                    <p>Email: ${user.email}</p>
+                    <p>Phone: ${user.phone}</p>
+                    <p>Location: ${user.location.city}, ${user.location.country}</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
